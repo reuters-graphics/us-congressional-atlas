@@ -35,7 +35,7 @@ class UsCongressMembership {
     if (member) return { ...member };
     member = this._getMemberByName(idSeatOrName);
     if (member) return { ...member };
-    return null;
+    return undefined;
   }
 
   getMembers() {
