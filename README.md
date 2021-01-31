@@ -14,7 +14,7 @@ $ yarn add @reuters-graphics/us-congressional-atlas
 
 ```javascript
 // Import from the library by Congress number and chamber... 
-import members from '@reuters-graphics/us-congressional-atlas/117/senate';
+import members from '@reuters-graphics/us-congressional-atlas/congress/117/senate';
 
 /**
  * Get all members 
