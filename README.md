@@ -1,21 +1,19 @@
 ![](badge.svg)
 
-# @reuters-graphics/us-congress-atlas
+# @reuters-graphics/us-congressional-atlas
 
-[![npm version](https://badge.fury.io/js/%40reuters-graphics%2Fus-congress-atlas.svg)](https://badge.fury.io/js/%40reuters-graphics%2Fus-congress-atlas) [![Reuters open source software](https://badgen.net/badge/Reuters/open%20source/?color=ff8000)](https://github.com/reuters-graphics/)
+[![npm version](https://badge.fury.io/js/%40reuters-graphics%2Fus-congressional-atlas.svg)](https://badge.fury.io/js/%40reuters-graphics%2Fus-congressional-atlas) [![Reuters open source software](https://badgen.net/badge/Reuters/open%20source/?color=ff8000)](https://github.com/reuters-graphics/)
 
 ## Quickstart
 
 ```
-$ yarn add @reuters-graphics/us-congress-atlas
+$ yarn add @reuters-graphics/us-congressional-atlas
 ```
 
 ```javascript
-import UsCongressAtlas from '@reuters-graphics/us-congress-atlas';
+import members from '@reuters-graphics/us-congressional-atlas/117/senate';
 
-const usCongressAtlas = new UsCongressAtlas();
-
-usCongressAtlas.run();
+members.getMembers();
 ```
 
 

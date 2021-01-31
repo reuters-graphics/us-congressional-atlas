@@ -1,32 +1,41 @@
 {
-  "name": "@reuters-graphics/us-congress-atlas",
+  "name": "@reuters-graphics/us-congressional-atlas",
   "version": "0.0.1",
-  "main": "dist/index.js",
-  "repository": "https://github.com/reuters-graphics/us-congress-atlas",
+  "main": "index.js",
+  "repository": "https://github.com/reuters-graphics/us-congressional-atlas",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "license": "MIT",
   "private": false,
   "keywords": [],
   "files": [
-    "dist/**/*",
+    "congress/**/*",
     "badge.svg"
   ],
   "scripts": {
+    "getMembers": "npx ./bin/getMembers/index.js",
     "prepublishOnly": "yarn test",
     "build": "rollup --config rollup.config.js",
-    "test": "yarn build && mocha"
+    "test": "TESTING=1 yarn getMembers && yarn build && mocha"
   },
   "devDependencies": {
     "@reuters-graphics/eslint-config": "^0.0.2",
+    "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
+    "aws-sdk": "^2.834.0",
+    "axios": "^0.21.1",
+    "camelcase-keys": "^6.2.2",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "expect.js": "^0.3.1",
+    "glob": "^7.1.6",
+    "lodash": "^4.17.20",
+    "mime-types": "^2.1.28",
     "mocha": "^7.1.2",
     "rollup": "^2.10.5",
     "rollup-plugin-node-externals": "^2.2.0",
-    "rollup-plugin-size-snapshot": "^0.12.0"
-  },
-  "dependencies": {}
+    "sharp": "^0.27.1",
+    "smartcrop": "^2.0.3",
+    "smartcrop-sharp": "^2.0.3"
+  }
 }
