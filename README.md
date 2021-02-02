@@ -124,7 +124,21 @@ $ yarn test
 ```
 
 #### Photos
-Photos come from the [unitedstates](https://github.com/unitedstates/images) project and are resized and published to our own servers during the build. You can overwrite the photo used by adding it to the `images/` directory named by the candidate's bioguide ID, e.g., `P000603.jpg`.
+Photos come from the [unitedstates](https://github.com/unitedstates/images) project and are resized and published to our own servers during the build.
+
+You can overwrite the photo used by adding it to the `images/` directory named by the candidate's bioguide ID, e.g., `P000603.jpg`.
+
+Once you've added custom photos, be sure to run:
+
+```
+$ yarn getMembers
+```
+
+... which will upload them to AWS. Then update and republish the library with:
+
+```
+$ yarn publish
+```
 
 ## Testing
 
