@@ -13,7 +13,9 @@ if (!fs.existsSync(IMAGE_DIR)) fs.mkdirSync(IMAGE_DIR, { recursive: true });
 function checkForLocalCopy(bioguideId) {
   const localPath = path.resolve(__dirname, `../../../images/${bioguideId}.jpg`);
   if (!fs.existsSync(localPath)) return false;
-  fs.copyFileSync(localPath, path.join(IMAGE_DIR, `${bioguideId}/original.jpg`));
+  const imgPath = path.join(IMAGE_DIR, `${bioguideId}/original.jpg`);
+  ensureDir(imgPath);
+  fs.copyFileSync(localPath, imgPath);
   return true;
 }
 
